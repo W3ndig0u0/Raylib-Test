@@ -14,30 +14,29 @@ namespace Raylib_Test
       Color newPink = new Color(255, 105, 180, 255);
       Color white = Color.WHITE;
       Raylib.SetExitKey(KeyboardKey.KEY_ESCAPE);
-      Rectangle playerRect = new Rectangle(150, 150, 150, 150);
+      Rectangle playerRect = new Rectangle(150, 150, 50, 50);
 
       while (!Raylib.WindowShouldClose())
       {
         Vector2 mousePos = Raylib.GetMousePosition();
         bool areOverlapping = Raylib.CheckCollisionPointRec(mousePos, playerRect);
 
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_S) && playerRect.y != 450)
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_S) && playerRect.y != 550)
         {
-          playerRect.y++;
+          playerRect.y += Convert.ToSingle(0.5);
         }
         else if (Raylib.IsKeyDown(KeyboardKey.KEY_W) && playerRect.y != 0)
         {
-          playerRect.y--;
+          playerRect.y -= Convert.ToSingle(0.5);
         }
-        else if (Raylib.IsKeyDown(KeyboardKey.KEY_D) && playerRect.x != 650)
+        else if (Raylib.IsKeyDown(KeyboardKey.KEY_D) && playerRect.x != 750)
         {
-          playerRect.x++;
+          playerRect.x += Convert.ToSingle(0.5);
         }
         else if (Raylib.IsKeyDown(KeyboardKey.KEY_A) && playerRect.x != 0)
         {
-          playerRect.x--;
+          playerRect.x -= Convert.ToSingle(0.5);
         }
-
 
         Raylib.BeginDrawing();
         Raylib.ClearBackground(white);
