@@ -18,14 +18,8 @@ namespace Raylib_Test
 
       while (!Raylib.WindowShouldClose())
       {
-        string Pressed = "Not Pressing";
         Vector2 mousePos = Raylib.GetMousePosition();
         bool areOverlapping = Raylib.CheckCollisionPointRec(mousePos, playerRect);
-
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_SPACE))
-        {
-          Pressed = "Pressing!";
-        }
 
         if (Raylib.IsKeyDown(KeyboardKey.KEY_S) && playerRect.y != 450)
         {
@@ -54,9 +48,6 @@ namespace Raylib_Test
         Raylib.DrawText(playerRect.x.ToString(), 60, 40, 20, Color.ORANGE);
 
         Raylib.DrawText(areOverlapping.ToString(), 10, 60, 20, Color.BLACK);
-
-        Raylib.DrawText("Press Spacebar", 300, 200, 30, Color.GRAY);
-        Raylib.DrawText(Pressed, 250, 300, 60, Color.BLACK);
 
         Raylib.DrawRectangleRec(playerRect, Color.SKYBLUE);
 
