@@ -27,7 +27,7 @@ namespace Raylib_Test
           Pressed = "Pressing!";
         }
 
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_S) && playerRect.y != 600)
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_S) && playerRect.y != 800)
         {
           playerRect.y++;
         }
@@ -35,7 +35,7 @@ namespace Raylib_Test
         {
           playerRect.y--;
         }
-        else if (Raylib.IsKeyDown(KeyboardKey.KEY_D) && playerRect.x != 800)
+        else if (Raylib.IsKeyDown(KeyboardKey.KEY_D) && playerRect.x != 600)
         {
           playerRect.x++;
         }
