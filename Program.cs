@@ -25,6 +25,7 @@ namespace Raylib_Test
 
       while (!Raylib.WindowShouldClose())
       {
+
         Vector2 mousePos = Raylib.GetMousePosition();
         bool areOverlapping = Raylib.CheckCollisionPointRec(mousePos, playerRect);
 
@@ -63,3 +64,4 @@ namespace Raylib_Test
     }
   }
 }
+
